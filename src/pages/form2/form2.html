@@ -1,0 +1,6 @@
+<ion-content padding>
+  <div *ngIf="controls; else loading" >
+    <dynamic-form #dynamicForm="dynamicForm" [controls]="controls" [form]="form"></dynamic-form>
+  </div>
+  <ng-template #loading>Getting Data...</ng-template>
+</ion-content>

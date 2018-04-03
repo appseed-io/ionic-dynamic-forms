@@ -11,6 +11,8 @@ import { GoogleMapsModule } from '../pages/google-maps/google-maps.module';
 import { HomeModule } from '../pages/home/home.module';
 import { SlideBoxModule } from '../pages/slide-box/slide-box.module';
 import { WordpressModule } from '../pages/wordpress/wordpress.module';
+import { Form1Module } from '../pages/form1/form1.module';
+import { Form2Module } from '../pages/form2/form2.module';
 import { MyApp } from './app.component';
 
 @NgModule({
@@ -27,7 +29,9 @@ import { MyApp } from './app.component';
 		GoogleMapsModule,
 		HomeModule,
 		SlideBoxModule,
-		WordpressModule
+		WordpressModule,
+		Form1Module,
+		Form2Module
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [

@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <ion-list>
+    <ion-item *ngFor="let control of controls">
+      <ion-input *ngIf="control.controlType === 'textbox'" [formControlName]="control.key"
+        [id]="control.key" [type]="control.type" [placeholder]="control.label">
+      </ion-input>
+      <ion-textarea *ngIf="control.controlType === 'textarea'" [formControlName]="control.key"
+        [id]="control.key" [placeholder]="control.label" rows="4">
+      </ion-textarea>
+
+      <ion-label *ngIf="control.controlType === 'select'">{{control.label}}</ion-label>
+      <ion-select [formControlName]="control.key" [id]="control.key" *ngIf="control.controlType === 'select'">
+        <ion-option *ngFor="let option of control.options" [value]="option">{{option.label}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</form>
