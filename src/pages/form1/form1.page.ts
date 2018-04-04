@@ -12,6 +12,7 @@ import 'rxjs/add/operator/map';
 export class Form1Page {
 	controls: ControlBase<any>[];
 	form: FormGroup;
+	const FILENAME = 'form1-conf.json';
 
 	constructor(public configService: ConfigService,
 							public controlsService: ControlsService
@@ -20,7 +21,7 @@ export class Form1Page {
 	}
 
 	ionViewWillEnter() {
-		this.configService.getConfig('form1-conf.json')
+		this.configService.getConfig(this.FILENAME)
 			.map(res => res.json())
 			.subscribe(data => {
 					this.controls = this.controlsService.getControls(data);
