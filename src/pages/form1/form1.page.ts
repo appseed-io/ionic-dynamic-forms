@@ -12,7 +12,8 @@ import 'rxjs/add/operator/map';
 export class Form1Page {
 	controls: ControlBase<any>[];
 	form: FormGroup;
-	const FILENAME = 'form1-conf.json';
+	submitted: any;
+	readonly FILENAME = 'form1-conf.json';
 
 	constructor(public configService: ConfigService,
 							public controlsService: ControlsService
@@ -26,6 +27,14 @@ export class Form1Page {
 			.subscribe(data => {
 					this.controls = this.controlsService.getControls(data);
 				});
+		this.form.valueChanges
+			.subscribe(val => {
+				this.submitted = val;
+			});
+	}
+
+	submitForm($event){
+		console.log("Success", this.submitted);
 	}
 
 
