@@ -4,6 +4,8 @@ import { ControlBase } from '../../common/forms/control-base';
 import { ControlsService } from '../../common/forms/controls.service';
 import { ConfigService } from '../../services/getConfig.service';
 import 'rxjs/add/operator/map';
+import { AlertController } from 'ionic-angular';
+
 
 @Component({
 	templateUrl: 'form1.html',
@@ -16,7 +18,8 @@ export class Form1Page {
 	readonly FILENAME = 'form1-conf.json';
 
 	constructor(public configService: ConfigService,
-							public controlsService: ControlsService
+							public controlsService: ControlsService,
+							public alertCtrl: AlertController
 						) {
 		this.form = new FormGroup({});
 	}
@@ -34,7 +37,13 @@ export class Form1Page {
 	}
 
 	submitForm($event){
-		console.log("Success", this.submitted);
+		let alert = this.alertCtrl.create({
+      title: 'Success!',
+      subTitle: 'Your form was successfully submitted!',
+      buttons: ['OK']
+    });
+    alert.present();
+		console.log("Success\n", this.submitted);
 	}
 
 
