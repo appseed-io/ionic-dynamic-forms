@@ -8,11 +8,17 @@
 </ion-header>
 
 <ion-content padding>
-  <div *ngIf="controls; else loading" >
+  <div *ngIf="controls else loading" >
     <dynamic-form #dynamicForm="dynamicForm" [controls]="controls" [form]="form"></dynamic-form>
   </div>
-  <ng-template #loading>Getting Data...</ng-template>
+
+	<ng-template #loading>
+		<div class="loading">
+			Getting Data...
+		</div>
+	</ng-template>
 </ion-content>
+
 <ion-footer>
   <ion-toolbar>
     <ion-buttons end>
