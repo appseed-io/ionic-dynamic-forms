@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { ControlBase } from '../../common/forms/control-base';
 import { ControlsService } from '../../common/forms/controls.service';
-import { ConfigService } from '../../services/getConfig.service';
+import { FormConfigService } from '../../services/form-config.service';
 import 'rxjs/add/operator/map';
 import { AlertController } from 'ionic-angular';
-
 
 @Component({
 	templateUrl: 'form1.html',
@@ -17,7 +16,7 @@ export class Form1Page {
 	submitted: any;
 	readonly FILENAME = 'form1-conf.json';
 
-	constructor(public configService: ConfigService,
+	constructor(public configService: FormConfigService,
 							public controlsService: ControlsService,
 							public alertCtrl: AlertController
 						) {
@@ -25,7 +24,7 @@ export class Form1Page {
 	}
 
 	ionViewWillEnter() {
-		this.configService.getConfig(this.FILENAME)
+		this.configService.getFormConfig(this.FILENAME)
 			.map(res => res.json())
 			.subscribe(data => {
 					this.controls = this.controlsService.getControls(data);
