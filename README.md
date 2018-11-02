@@ -1,3 +1,6 @@
+##StackBlitz demo
+https://stackblitz.com/edit/ionic-dynamic-forms
+
 # Supermodular2 Ionic
 A super modular Ionic 2.x starter application.
 
