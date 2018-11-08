@@ -1,8 +1,11 @@
-## StackBlitz demo
-https://stackblitz.com/edit/ionic-dynamic-forms
+# Ionic Dynamic Forms
+This is an implementation of Angular Dynamic Forms in an Ionic application.  
+A detailed presentation can be found in this [blog](http://appseed.io/blog/how-use-angular-dynamic-forms-ionic-applications).
 
-# Supermodular2 Ionic
-A super modular Ionic 2.x starter application.
+## StackBlitz demo
+A live [demo](https://stackblitz.com/edit/ionic-dynamic-forms).
+
+This app is based on **Supermodular2 Ionic**, a super modular Ionic 2.x starter application.
 
 * Project's Home: https://github.com/skounis/supermodular2
 
