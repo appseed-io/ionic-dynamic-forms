@@ -15,7 +15,7 @@ This app is based on **Supermodular2 Ionic**, a super modular Ionic 2.x starter 
 ## Dependecies, Run and Build
 
 ### Install Ionic CLI 2.x
-To build and run this `Supermodular 2` you need to have Ionic CLI beta installed
+To build and run this application you need to have Ionic CLI installed
 
 ```bash
 $ sudo npm install -g ionic
