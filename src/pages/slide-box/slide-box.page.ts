@@ -14,7 +14,7 @@ export class SlideBoxPage {
 		let items = [];
 		for (let i = 0; i < n; i++) {
 			items.push({
-				image: 'http://lorempixel.com/g/786/1024/city/' + i + '/'
+				image: 'https://picsum.photos/g/786/1024?image=' + i
 			});
 		}
 		return items;
