@@ -9,7 +9,7 @@
 
 <ion-content class="getting-started">
 	<div class="home-hello">
-		<img src="https://picsum.photos/g/786/1024?image=" />
+		<img src="https://picsum.photos/g/1024/786?image=" />
 
 		<div class="hello-title" text-wrap>
 			<h1>ABC Corp Inc.</h1>
@@ -30,30 +30,32 @@
 		</ion-col>
 	</ion-row>
 
-	<ion-list>
-		<button ion-item (click)="callUs()">
-				<ion-icon name="phone-portrait" item-start></ion-icon>
-				Call us
-		</button>
+	<ion-card>
+		<ion-list>
+			<button ion-item (click)="callUs()">
+					<ion-icon name="phone-portrait" item-start></ion-icon>
+					Call us
+			</button>
 
-		<button ion-item (click)="sendEmail()">
-				<ion-icon name="mail" item-start></ion-icon>
-				Send us and Email
-		</button>
-
-
-
-		<button ion-item  (click)="getDirections()">
-				<ion-icon  name="compass" item-start></ion-icon>
-				Find us / Get directions
-		</button>
+			<button ion-item (click)="sendEmail()">
+					<ion-icon name="mail" item-start></ion-icon>
+					Send us and Email
+			</button>
 
 
 
-		<button ion-item (click)="openFacebookPage()">
-				<ion-icon name="logo-facebook" item-start></ion-icon>
-				Visit us on Facebook
-		</button>
-	</ion-list>
+			<button ion-item  (click)="getDirections()">
+					<ion-icon  name="compass" item-start></ion-icon>
+					Find us / Get directions
+			</button>
+
+
+
+			<button ion-item (click)="openFacebookPage()">
+					<ion-icon name="logo-facebook" item-start></ion-icon>
+					Visit us on Facebook
+			</button>
+		</ion-list>
+	</ion-card>
 
 </ion-content>
