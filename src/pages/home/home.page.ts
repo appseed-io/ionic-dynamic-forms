@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Nav } from 'ionic-angular';
 
-import { WordpressListPage } from '../wordpress/list/wordpress.list.page';
-import { SlideBoxPage } from '../slide-box/slide-box.page';
+import { Form1Page } from '../form1/form1.page';
+import { Form2Page } from '../form2/form2.page';
 import { GoogleMapsPage } from '../google-maps/google-maps.page';
 
 import { Tile } from './models/tile.model';
@@ -54,20 +54,15 @@ export class HomePage {
 
 	private initTiles(): void {
 		this.tiles = [[{
-			title: 'Wordpress',
-			path: 'wordpress-articles',
-			icon: 'logo-wordpress',
-			component: WordpressListPage
+			title: 'Form 1',
+			path: 'form1',
+			icon: 'football',
+			component: Form1Page
 		}, {
-			title: 'Slides',
-			path: 'slides',
-			icon: 'swap',
-			component: SlideBoxPage
-		}], [{
-			title: 'Map',
-			path: 'map',
-			icon: 'map',
-			component: GoogleMapsPage
+			title: 'Form 2',
+			path: 'form2',
+			icon: 'film',
+			component: Form2Page
 		}]];
 	}
 }

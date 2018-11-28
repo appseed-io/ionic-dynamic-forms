@@ -3,7 +3,7 @@
 		<button ion-button menuToggle>
 			<ion-icon name="menu"></ion-icon>
 		</button>
-		<ion-title>Supermodular 2</ion-title>
+		<ion-title>Dynamic Forms</ion-title>
 	</ion-navbar>
 </ion-header>
 
@@ -30,40 +30,30 @@
 		</ion-col>
 	</ion-row>
 
-	<ion-row>
-		<ion-card class="quick-action" (click)="callUs()">
-			<ion-card-content>
-				<ion-icon name="phone-portrait"></ion-icon>
-				<span>Call us</span>
-			</ion-card-content>
-		</ion-card>
-	</ion-row>
+	<ion-list>
+		<button ion-item (click)="callUs()">
+				<ion-icon name="phone-portrait" item-start></ion-icon>
+				Call us
+		</button>
 
-	<ion-row>
-		<ion-card class="quick-action" (click)="sendEmail()">
-			<ion-card-content>
-				<ion-icon name="mail"></ion-icon>
-				<span>Send us and Email</span>
-			</ion-card-content>
-		</ion-card>
-	</ion-row>
+		<button ion-item (click)="sendEmail()">
+				<ion-icon name="mail" item-start></ion-icon>
+				Send us and Email
+		</button>
 
-	<ion-row>
-		<ion-card class="quick-action" (click)="getDirections()">
-			<ion-card-content>
-				<ion-icon name="compass"></ion-icon>
-				<span>Find us / Get directions</span>
-			</ion-card-content>
-		</ion-card>
-	</ion-row>
 
-	<ion-row>
-		<ion-card class="quick-action" (click)="openFacebookPage()">
-			<ion-card-content>
-				<ion-icon name="logo-facebook"></ion-icon>
-				<span>Visit us on Facebook</span>
-			</ion-card-content>
-		</ion-card>
-	</ion-row>
+
+		<button ion-item  (click)="getDirections()">
+				<ion-icon  name="compass" item-start></ion-icon>
+				Find us / Get directions
+		</button>
+
+
+
+		<button ion-item (click)="openFacebookPage()">
+				<ion-icon name="logo-facebook" item-start></ion-icon>
+				Visit us on Facebook
+		</button>
+	</ion-list>
 
 </ion-content>
